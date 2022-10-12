@@ -2,7 +2,7 @@ package medias.request;
 
 import com.google.gson.Gson;
 import medias.Media;
-import medias.dto.MediasDto;
+import medias.dto.MediasInDto;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
@@ -23,7 +23,7 @@ public class Api {
                 .build();
         try (Response response = client.newCall(request).execute()) {
             Gson gson = new Gson();
-            MediasDto medias = gson.fromJson(response.body().string(), MediasDto.class);
+            MediasInDto medias = gson.fromJson(response.body().string(), MediasInDto.class);
             return medias.toProduct();
         }
 

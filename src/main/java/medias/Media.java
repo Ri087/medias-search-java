@@ -9,7 +9,6 @@ public class Media {
     public ArrayList<Integer> genre_ids;
     public int id;
     public String media_type;
-    public String name;
     public ArrayList<String> origin_country;
     public String original_language;
     public String original_name;
@@ -21,18 +20,12 @@ public class Media {
     public boolean adult;
     public String original_title;
     public String release_date;
-    public String title;
     public boolean video;
+    public String title;
+    public String name;
 
-    public Media(String name, String title, Integer id) {
-        this.name = name;
-        this.title = title;
+    public Media(int id) {
         this.id = id;
-    }
-
-
-    public String toString() {
-        return id+" "+name+" "+title;
     }
 
 
