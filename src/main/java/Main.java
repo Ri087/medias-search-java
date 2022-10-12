@@ -41,8 +41,10 @@ public class Main {
                 System.out.println("nom: ");
                 String nameSearch = myObj.nextLine();
 
-                List<dto.Media> products = new Api().getApi(nameSearch);
-                System.out.println(products);
+                List<dto.Media> media = new Api().getApi(nameSearch);
+                for (dto.Media m : media){
+                    System.out.println(m.toString());
+                }
                 break;
             case 2:
                 // Perform "encrypt number" case.

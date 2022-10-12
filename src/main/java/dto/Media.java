@@ -31,6 +31,9 @@ public class Media {
     }
 
 
+    public String toString() {
+        return id+" "+name+" "+title;
+    }
 
 
 
