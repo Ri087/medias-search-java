@@ -30,7 +30,6 @@ public class Main {
                 System.out.print("\nError! Incorrect choice.\n");
             }
 
-
             switch (choice) {
                 case 1:
                     Scanner myObj = new Scanner(System.in);
@@ -54,7 +53,27 @@ public class Main {
             }
         }
 
+        switch (choice) {
+            case 1:
+                Scanner myObj = new Scanner(System.in);
+
+                System.out.print("Entrer le nom de votre filme/serie: ");
+                String nameSearch = myObj.nextLine();
+
+                List<Media> media = new Api().getApi(nameSearch);
+
+                for (Media m : media){
+                    System.out.println(m.toString());
+                }
+
+                break;
+            case 2:
+                // Perform "encrypt number" case.
+                break;
+            case 3:
+                return;
+
+            }
+        }
 
     }
-
-}
