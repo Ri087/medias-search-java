@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class Result {
+public class Medias {
 
     public ArrayList<Media> results;
 }

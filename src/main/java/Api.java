@@ -6,8 +6,7 @@ import java.io.IOException;
 
 public class Api {
     OkHttpClient client = new OkHttpClient();
-
-    String run(String url) throws IOException {
+    public String getApi(String url) throws IOException {
         Request request = new Request.Builder()
                 .url(url)
                 .build();
@@ -16,5 +15,4 @@ public class Api {
         }
 
     }
-
 }
