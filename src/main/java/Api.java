@@ -4,7 +4,7 @@ import okhttp3.Response;
 
 import java.io.IOException;
 
-public class getApi {
+public class Api {
     OkHttpClient client = new OkHttpClient();
 
     String run(String url) throws IOException {
