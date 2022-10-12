@@ -4,6 +4,9 @@ public class Serie extends Media{
 
     protected String name;
 
+    public static final String ANSI_RESET = "\u001B[0m";
+    public static final String ANSI_GREEN = "\u001B[32m";
+
     public Serie(Integer id, String name) {
         super(id);
         this.name = name;
@@ -11,6 +14,6 @@ public class Serie extends Media{
 
     @Override
     public String toString() {
-        return "Serie: " + id + " " +name;
+        return ANSI_GREEN + "Serie: " + id + " " +name+ANSI_RESET;
     }
 }
