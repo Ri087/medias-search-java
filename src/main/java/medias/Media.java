@@ -21,8 +21,6 @@ public class Media {
     public String original_title;
     public String release_date;
     public boolean video;
-    public String title;
-    public String name;
 
     public Media(int id) {
         this.id = id;
