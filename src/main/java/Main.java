@@ -41,8 +41,8 @@ public class Main {
                 System.out.println("nom: ");
                 String nameSearch = myObj.nextLine();
 
-                List<dto.Media> media = new Api().getApi(nameSearch);
-                for (dto.Media m : media){
+                List<Media> media = new Api().getApi(nameSearch);
+                for (Media m : media){
                     System.out.println(m.toString());
                 }
                 break;
@@ -54,6 +54,3 @@ public class Main {
     }
 
 }
-
-
-
