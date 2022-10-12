@@ -1,16 +1,9 @@
-import com.google.gson.Gson;
-import dto.Media;
-import dto.MediasDto;
+import medias.Media;
+import medias.request.Api;
 
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.nio.charset.StandardCharsets;
-import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
-import java.util.stream.Collectors;
 
 
 public class Main {
@@ -36,15 +29,16 @@ public class Main {
         switch (choice) {
             case 1:
                 Scanner myObj = new Scanner(System.in);
-                Api searchApi = new Api();
 
-                System.out.println("nom: ");
+                System.out.print("nom: ");
                 String nameSearch = myObj.nextLine();
 
                 List<Media> media = new Api().getApi(nameSearch);
+
                 for (Media m : media){
                     System.out.println(m.toString());
                 }
+
                 break;
             case 2:
                 // Perform "encrypt number" case.

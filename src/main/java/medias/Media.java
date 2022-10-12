@@ -1,4 +1,4 @@
-package dto;
+package medias;
 
 import java.util.ArrayList;
 
