@@ -22,4 +22,10 @@ public class MediaDto {
     public String release_date;
     public String title;
     public boolean video;
+
+    public Media toProduct() {
+        Media media = new Media(this.name, this.title, this.id);
+        return media;
+    }
+
 }

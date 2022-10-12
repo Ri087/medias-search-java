@@ -1,3 +1,5 @@
+package dto;
+
 import java.util.ArrayList;
 
 public class Media {
@@ -21,6 +23,12 @@ public class Media {
     public String release_date;
     public String title;
     public boolean video;
+
+    public Media(String name, String title, Integer id) {
+        this.name = name;
+        this.title = title;
+        this.id = id;
+    }
 
 
 

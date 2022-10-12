@@ -1,4 +1,5 @@
 import com.google.gson.Gson;
+import dto.Media;
 import dto.MediasDto;
 
 import java.io.BufferedReader;
@@ -40,8 +41,8 @@ public class Main {
                 System.out.println("nom: ");
                 String nameSearch = myObj.nextLine();
 
-                MediasDto response = searchApi.getApi("https://api.themoviedb.org/3/search/multi?api_key=9c08262321f4e984577c6abaa528b6b7&query=" + nameSearch);
-                System.out.println(response);
+                List<dto.Media> products = new Api().getApi(nameSearch);
+                System.out.println(products);
                 break;
             case 2:
                 // Perform "encrypt number" case.
