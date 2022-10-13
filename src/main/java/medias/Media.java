@@ -22,8 +22,9 @@ public class Media {
     public String release_date;
     public boolean video;
 
-    public Media(int id) {
+    public Media(int id, String media_type ) {
         this.id = id;
+        this.media_type = media_type;
     }
 
 

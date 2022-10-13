@@ -6,14 +6,13 @@ public class Movie extends Media{
 
     public static final String ANSI_RESET = "\u001B[0m";
     public static final String ANSI_BLUE = "\u001B[34m";
-
-    public Movie(Integer id, String title) {
-        super(id);
+    public Movie(int id,String title,String media_type) {
+        super(id, media_type);
         this.title = title;
     }
 
     @Override
     public String toString() {
-        return ANSI_BLUE + "Movie: " + id + " " + title + ANSI_RESET;
+        return ANSI_BLUE + media_type + ": " + id + " " + title + " " + ANSI_RESET;
     }
 }

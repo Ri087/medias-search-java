@@ -11,11 +11,14 @@ public class MediasInDto {
         List<Media> media = new ArrayList<>();
         int count =0;
         for (MediaInDto inDto : results) {
-            if (count == 15) {
-                break;
+            if (inDto.media_type.equals("tv") || inDto.media_type.equals("movie")){
+                media.add(inDto.toProduct());
+                count += 1;
+                if (count == 15) {
+                    break;
+                }
             }
-            count += 1;
-            media.add(inDto.toProduct());
+
         }
         return media;
     }

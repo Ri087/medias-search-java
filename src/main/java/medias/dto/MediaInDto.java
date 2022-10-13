@@ -29,9 +29,9 @@ public class MediaInDto {
 
     public Media toProduct() {
         if (this.name != null){
-            return new Serie(this.id,this.name);
+            return new Serie(this.id,this.name, this.media_type);
         }else{
-            return new Movie(this.id, this.title);
+            return new Movie(this.id, this.title, this.media_type);
         }
     }
 
