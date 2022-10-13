@@ -1,9 +1,12 @@
-package medias;
+package com.jeremymartin.api;
+
+import com.jeremymartin.medias.Media;
+import com.jeremymartin.medias.Movie;
+import com.jeremymartin.medias.Serie;
 
 import java.util.ArrayList;
 
-public class Media {
-
+public class MediaInDto {
     public String backdrop_path;
     public String first_air_date;
     public ArrayList<Integer> genre_ids;
@@ -21,12 +24,16 @@ public class Media {
     public String original_title;
     public String release_date;
     public boolean video;
+    public String title;
+    public String name;
 
-    public Media(int id, String media_type ) {
-        this.id = id;
-        this.media_type = media_type;
+    public Media toProduct() {
+        if (this.name != null){
+            return new Serie(this.id,this.name, this.media_type);
+        }else{
+            return new Movie(this.id, this.title, this.media_type);
+        }
     }
-
 
 
 }

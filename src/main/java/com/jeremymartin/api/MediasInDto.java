@@ -1,6 +1,6 @@
-package medias.dto;
+package com.jeremymartin.api;
 
-import medias.Media;
+import com.jeremymartin.medias.Media;
 
 import java.util.*;
 

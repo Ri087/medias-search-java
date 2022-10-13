@@ -1,8 +1,7 @@
-package medias.request;
+package com.jeremymartin.api;
 
 import com.google.gson.Gson;
-import medias.Media;
-import medias.dto.MediasInDto;
+import com.jeremymartin.medias.Media;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;

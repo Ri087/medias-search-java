@@ -1,12 +1,13 @@
-package medias.dto;
+package com.jeremymartin.medias;
 
-import medias.Media;
-import medias.Movie;
-import medias.Serie;
+import com.jeremymartin.ui.ConsoleColor;
+import com.jeremymartin.ui.Displayable;
+import com.jeremymartin.ui.Displayer;
 
 import java.util.ArrayList;
 
-public class MediaInDto {
+public abstract class Media implements Displayable {
+
     public String backdrop_path;
     public String first_air_date;
     public ArrayList<Integer> genre_ids;
@@ -24,16 +25,16 @@ public class MediaInDto {
     public String original_title;
     public String release_date;
     public boolean video;
-    public String title;
-    public String name;
 
-    public Media toProduct() {
-        if (this.name != null){
-            return new Serie(this.id,this.name, this.media_type);
-        }else{
-            return new Movie(this.id, this.title, this.media_type);
-        }
+    public Media(int id, String media_type ) {
+        this.id = id;
+        this.media_type = media_type;
     }
 
+    public abstract ConsoleColor getColor();
 
+    @Override
+    public void display(Displayer displayer) {
+        displayer.writeWithColor(toString(), getColor());
+    }
 }
