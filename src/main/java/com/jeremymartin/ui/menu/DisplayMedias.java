@@ -24,7 +24,7 @@ public class DisplayMedias extends ApiOption {
         List<Media> media = this.api.getApi(nameSearch);
 
         for (Media m : media) {
-            System.out.println(m.toString());
+            m.display(displayer);
         }
     }
 }

@@ -22,4 +22,5 @@ public class Serie extends Media {
     public String toString() {
         return media_type + ": " + id + " " +name+ " ";
     }
+
 }
