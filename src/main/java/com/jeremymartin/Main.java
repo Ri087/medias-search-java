@@ -1,13 +1,9 @@
 package com.jeremymartin;
 
 import com.jeremymartin.api.Api;
-import com.jeremymartin.medias.Media;
 import com.jeremymartin.ui.Displayer;
 import com.jeremymartin.ui.menu.*;
-
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 public class Main {

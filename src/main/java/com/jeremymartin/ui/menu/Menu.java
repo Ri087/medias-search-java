@@ -2,7 +2,6 @@ package com.jeremymartin.ui.menu;
 
 import com.jeremymartin.ui.Displayable;
 import com.jeremymartin.ui.Displayer;
-
 import java.util.ArrayList;
 import java.util.List;
 

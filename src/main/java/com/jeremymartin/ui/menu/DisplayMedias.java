@@ -3,8 +3,6 @@ package com.jeremymartin.ui.menu;
 import com.jeremymartin.api.Api;
 import com.jeremymartin.medias.Media;
 import com.jeremymartin.ui.Displayer;
-
-import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
 

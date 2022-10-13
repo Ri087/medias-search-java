@@ -2,10 +2,11 @@ package com.jeremymartin.api;
 
 import com.google.gson.Gson;
 import com.jeremymartin.medias.Media;
+import com.jeremymartin.medias.Movie;
+import com.jeremymartin.medias.Serie;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
-
 import java.io.IOException;
 import java.util.List;
 
@@ -25,6 +26,28 @@ public class Api {
             MediasInDto medias = gson.fromJson(response.body().string(), MediasInDto.class);
             return medias.toProduct();
         }
-
     }
+
+    public Movie getApiMovie(String url) throws  IOException{
+        Request request = new Request.Builder()
+                .url(url)
+                .build();
+        try (Response response = client.newCall(request).execute()) {
+            Gson gson = new Gson();
+            Movie movie = gson.fromJson(response.body().string(), Movie.class);
+            return movie;
+        }
+    }
+    public Serie getApiSerie(String url) throws  IOException{
+        Request request = new Request.Builder()
+                .url(url)
+                .build();
+        try (Response response = client.newCall(request).execute()) {
+            Gson gson = new Gson();
+            Serie serie = gson.fromJson(response.body().string(), Serie.class);
+            return serie;
+        }
+    }
+
+
 }

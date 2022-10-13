@@ -4,37 +4,32 @@ import com.jeremymartin.ui.ConsoleColor;
 import com.jeremymartin.ui.Displayable;
 import com.jeremymartin.ui.Displayer;
 
-import java.util.ArrayList;
 
 public abstract class Media implements Displayable {
+    protected int id;
+    protected String media_type;
+    protected String overview;
+    protected double vote_average;
+    protected int vote_count;
+    protected String type;
 
-    public String backdrop_path;
-    public String first_air_date;
-    public ArrayList<Integer> genre_ids;
-    public int id;
-    public String media_type;
-    public ArrayList<String> origin_country;
-    public String original_language;
-    public String original_name;
-    public String overview;
-    public double popularity;
-    public String poster_path;
-    public double vote_average;
-    public int vote_count;
-    public boolean adult;
-    public String original_title;
-    public String release_date;
-    public boolean video;
-
-    public Media(int id, String media_type ) {
+    public Media(int id, String media_type, String type, String overview) {
         this.id = id;
         this.media_type = media_type;
+        this.type = type;
+        this.overview = overview;
     }
 
-    public abstract ConsoleColor getColor();
+    protected abstract ConsoleColor getColor();
 
     @Override
     public void display(Displayer displayer) {
         displayer.writeWithColor(toString(), getColor());
     }
+
+    public void displayDetails(Displayer displayer) {
+        displayer.writeWithColor(toStringDetails(), getColor());
+    }
+
+    protected abstract String toStringDetails();
 }

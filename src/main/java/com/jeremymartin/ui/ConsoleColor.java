@@ -7,7 +7,7 @@ public enum ConsoleColor {
     RED("\u001B[31m"),
     BLUE("\u001B[34m");
 
-    public final String label;
+    protected final String label;
 
     private ConsoleColor(String label) {
         this.label = label;
