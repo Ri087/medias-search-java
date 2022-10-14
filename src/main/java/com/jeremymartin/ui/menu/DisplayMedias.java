@@ -3,6 +3,9 @@ package com.jeremymartin.ui.menu;
 import com.jeremymartin.api.Api;
 import com.jeremymartin.medias.Media;
 import com.jeremymartin.ui.Displayer;
+import org.apache.commons.cli.ParseException;
+
+import java.io.IOException;
 import java.util.List;
 import java.util.Scanner;
 
@@ -24,5 +27,14 @@ public class DisplayMedias extends ApiOption {
         for (Media m : media) {
             m.display(displayer);
         }
+    }
+
+    public void executeArgs(String nameSearch) throws IOException {
+        List<Media> media = this.api.getApi(nameSearch);
+
+        for (Media m : media) {
+            m.display(displayer);
+        }
+
     }
 }

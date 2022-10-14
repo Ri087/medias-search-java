@@ -28,8 +28,16 @@ public class DisplayDetailsMedia extends ApiOption {
             Movie movie = this.api.getApiMovie(customUrlSearchPerId);
             movie.displayDetails(displayer);
         } else {
-            Serie serie = this.api.getApiSerie(customUrlSearchPerId);
-            serie.displayDetails(displayer);
+            Movie movie = this.api.getApiMovie(customUrlSearchPerId);
+            movie.displayDetails(displayer);
         }
+    }
+
+    public void executeArg(String id) throws Exception {
+        Movie movie = this.api.getApiMovie("https://api.themoviedb.org/3/movie/"+id+"+?api_key=9c08262321f4e984577c6abaa528b6b7");
+        movie.displayDetails(displayer);
+
+        Serie serie = this.api.getApiSerie("https://api.themoviedb.org/3/tv/"+id+"+?api_key=9c08262321f4e984577c6abaa528b6b7");
+        serie.displayDetails(displayer);
     }
 }

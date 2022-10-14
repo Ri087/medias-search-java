@@ -16,7 +16,7 @@ public class Menu implements Displayable {
 
     public void display(Displayer displayer) {
         displayer.breakLine();
-        displayer.write("Welcome on the Api Movies/Series");
+        displayer.write("Welcome on the Api Movies/Series\n");
         for (MenuOption option : options) {
             option.display(displayer);
         }
