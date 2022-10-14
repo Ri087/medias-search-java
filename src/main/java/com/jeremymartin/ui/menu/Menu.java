@@ -26,12 +26,12 @@ public class Menu implements Displayable {
 
     public MenuOption getOptionByIndex(int index) {
         MenuOption option = null;
-        for (MenuOption currentOption : options) {
-            if (currentOption.getIndex() == index) {
-                option = currentOption;
-                break;
+
+            for (MenuOption currentOption : options) {
+                if (currentOption.getIndex() == index) {
+                    option = currentOption;
+                }
             }
-        }
         return option;
     }
 }

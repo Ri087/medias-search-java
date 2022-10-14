@@ -18,12 +18,9 @@ public class DisplayMedias extends ApiOption {
     @Override
     public void execute() throws Exception {
         Scanner myObj = new Scanner(System.in);
-
         System.out.print("Entrer le nom de votre filme/serie: ");
         String nameSearch = myObj.nextLine();
-
         List<Media> media = this.api.getApi(nameSearch);
-
         for (Media m : media) {
             m.display(displayer);
         }
@@ -31,7 +28,6 @@ public class DisplayMedias extends ApiOption {
 
     public void executeArgs(String nameSearch) throws IOException {
         List<Media> media = this.api.getApi(nameSearch);
-
         for (Media m : media) {
             m.display(displayer);
         }

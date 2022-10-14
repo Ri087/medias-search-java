@@ -18,7 +18,9 @@ public class Main {
         CommandLineParser parser = new DefaultParser();
         CommandLine cmd = parser.parse( options, args);
 
-        try (Scanner    scanner = new Scanner(System.in)) {
+        try (Scanner scanner = new Scanner(System.in)) {
+
+
 
             Displayer displayer = new Displayer();
             Api api = new Api();
@@ -42,12 +44,19 @@ public class Main {
                     int indexSelected = scanner.nextInt();
                     scanner.nextLine();
                     MenuOption option = menu.getOptionByIndex(indexSelected);
-                    option.execute();
-                    mustContinue = option.mustContinueAfterRun();
+
+                    if (option != null) {
+                        option.execute();
+                        mustContinue = option.mustContinueAfterRun();
+                    } else {
+                        displayer.writeError("error: index entry ("+indexSelected + ") unknown");
+                        mustContinue = true;
+                    }
                 } while (mustContinue);
             } catch (Exception exception) {
                 displayer.writeError("An error occurred:");
                 displayer.writeError(exception.getLocalizedMessage());
+
             }
         }
     }

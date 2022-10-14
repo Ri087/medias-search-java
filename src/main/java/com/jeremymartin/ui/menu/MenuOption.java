@@ -1,5 +1,6 @@
 package com.jeremymartin.ui.menu;
 
+import com.jeremymartin.ui.ConsoleColor;
 import com.jeremymartin.ui.Displayable;
 import com.jeremymartin.ui.Displayer;
 import java.util.Scanner;
@@ -30,6 +31,7 @@ public abstract class MenuOption implements Displayable {
     public void display(Displayer displayer) {
         displayer.write(index + " - " + name);
     }
+
 
     public boolean mustContinueAfterRun() {
         //  Always continue after run by default
