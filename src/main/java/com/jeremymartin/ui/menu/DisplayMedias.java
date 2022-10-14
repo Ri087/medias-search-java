@@ -31,6 +31,5 @@ public class DisplayMedias extends ApiOption {
         for (Media m : media) {
             m.display(displayer);
         }
-
     }
 }

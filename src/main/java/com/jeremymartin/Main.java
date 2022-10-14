@@ -20,8 +20,6 @@ public class Main {
 
         try (Scanner scanner = new Scanner(System.in)) {
 
-
-
             Displayer displayer = new Displayer();
             Api api = new Api();
             Menu menu = new Menu();

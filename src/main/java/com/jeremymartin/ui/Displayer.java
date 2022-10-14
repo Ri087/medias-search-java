@@ -14,8 +14,6 @@ public class Displayer {
         writeWithColor(text, ConsoleColor.RED);
     }
 
-    public void writeWithColor(String text, ConsoleColor color) {
-        write(color.label + text + ConsoleColor.RESET.label);
-    }
+    public void writeWithColor(String text, ConsoleColor color) {write(color.label + text + ConsoleColor.RESET.label);}
 
 }

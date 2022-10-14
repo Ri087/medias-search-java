@@ -26,18 +26,15 @@ public abstract class MenuOption implements Displayable {
     protected void setIndex(int index) {
         this.index = index;
     }
-
     @Override
     public void display(Displayer displayer) {
         displayer.write(index + " - " + name);
     }
 
-
     public boolean mustContinueAfterRun() {
         //  Always continue after run by default
         return true;
     }
-
     public abstract void execute() throws Exception;
 
 }
